@@ -1,0 +1,10 @@
+{
+  "name": "aio",
+  "type": "module",
+  "dependencies": {
+    "effect": "^4.1.4"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}
