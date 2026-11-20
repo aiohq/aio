@@ -28,7 +28,7 @@ aio uses Effect v4, but most Effect code in a model's training data is v3, so re
 
 ## Verify a change
 
-A change is done when `npm run check` exits 0. The command runs Prettier, the typecheck, Oxlint, and Vitest in about one second, so run it after every edit. Run `npm run fix` first to apply the formatting and lint fixes.
+A change is done when `npm run check` exits 0. The command runs oxfmt, the typecheck, Oxlint, and Vitest in about one second, so run it after every edit. Run `npm run fix` first to apply the formatting and lint fixes.
 
 The typecheck runs `effect-tsgo tsc`, which adds the Effect language service to the compiler. An Effect diagnostic fails the typecheck like a type error, and that includes a diagnostic of severity `suggestion`. Fix the code the diagnostic names. If you add an `@effect-diagnostics` directive to silence one, give the reason in the pull request body.
 

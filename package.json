@@ -1,18 +1,18 @@
 {
   "name": "aio",
-  "type": "module",
   "private": true,
+  "type": "module",
   "scripts": {
     "prepare": "effect-tsgo patch --typescript --no-oxlint",
     "typecheck": "effect-tsgo tsc",
     "lint": "oxlint --deny-warnings",
     "lint:fix": "oxlint --fix --deny-warnings",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
     "test": "vitest run",
     "test:watch": "vitest",
-    "fix": "prettier --write . && oxlint --fix",
-    "check": "prettier --check . && effect-tsgo tsc && oxlint --deny-warnings && vitest run"
+    "fix": "oxfmt && oxlint --fix",
+    "check": "oxfmt --check && effect-tsgo tsc && oxlint --deny-warnings && vitest run"
   },
   "dependencies": {
     "effect": "^4.1.4"
@@ -21,9 +21,9 @@
     "@effect/tsgo": "0.67.3",
     "@effect/vitest": "4.1.2",
     "@types/node": "24.19.2",
+    "oxfmt": "0.76.0",
     "oxlint": "1.91.0",
     "oxlint-tsgolint": "7.0.2005",
-    "prettier": "3.9.10",
     "typescript": "^7.0.2",
     "vitest": "5.1.0"
   }
