@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "prepare": "effect-tsgo patch --typescript --no-oxlint",
+    "prepare": "effect-tsgo patch --typescript --oxlint",
     "typecheck": "effect-tsgo tsc",
     "lint": "oxlint --deny-warnings",
     "lint:fix": "oxlint --fix --deny-warnings",
@@ -15,7 +15,7 @@
     "check": "oxfmt --check && effect-tsgo tsc && oxlint --deny-warnings && vitest run"
   },
   "dependencies": {
-    "effect": "^4.1.4"
+    "effect": "4.1.4"
   },
   "devDependencies": {
     "@effect/tsgo": "0.67.3",
@@ -24,7 +24,7 @@
     "oxfmt": "0.76.0",
     "oxlint": "1.91.0",
     "oxlint-tsgolint": "7.0.2005",
-    "typescript": "^7.0.2",
+    "typescript": "7.0.2",
     "vitest": "5.1.0"
   }
 }
