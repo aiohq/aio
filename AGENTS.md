@@ -22,6 +22,16 @@ Remove a worktree with `scripts/worktree.sh remove <branch>`.
 
 Write every commit subject as a Conventional Commit. Issue numbers go in the pull request body, as step 3 of "Change flow" says.
 
+## Effect
+
+aio uses Effect v4, but most Effect code in a model's training data is v3, so read the installed docs before you write Effect code. Start with `node_modules/effect/AGENTS.md` for the style rules, then open the example for your topic under `node_modules/effect/ai-docs/src/`. When the docs leave an API question open, read `node_modules/effect/src/`.
+
+## Verify a change
+
+A change is done when `npm run check` exits 0. The command runs Prettier, the typecheck, Oxlint, and Vitest in about one second, so run it after every edit. Run `npm run fix` first to apply the formatting and lint fixes.
+
+The typecheck runs `effect-tsgo tsc`, which adds the Effect language service to the compiler. An Effect diagnostic fails the typecheck like a type error, and that includes a diagnostic of severity `suggestion`. Fix the code the diagnostic names. If you add an `@effect-diagnostics` directive to silence one, give the reason in the pull request body.
+
 ## Agent skills
 
 ### Issue tracker
